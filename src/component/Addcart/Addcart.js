@@ -1,6 +1,6 @@
 import './Addcart.css'
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Addcart = (props) => {
     const {Time}=props
@@ -36,11 +36,15 @@ const NameDL=()=>{
         </div>
     )
 }
-
 const BrackTime=(props)=>{
     const {workTime}=props
     const [brakeTime,setBraketime]=useState(0)
-
+ useEffect(()=>{
+    const newTime=localStorage.getItem('Braek-Time')
+    if(newTime){
+        setBraketime(newTime)
+    }
+    },[brakeTime])
     const addBrake=(time)=>{
         setBraketime(time)
         localStorage.setItem('Braek-Time',JSON.stringify(time))
