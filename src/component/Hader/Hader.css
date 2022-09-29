@@ -1,0 +1,19 @@
+.hader{
+    background-color: rgb(234, 234, 236);
+    padding-left: 80px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+.hader img{
+    width: 80px;
+    height: 70%;
+}
+.hader p{
+    padding-left: 10px;
+    font-size: 40px;
+    font-weight: 700;
+}
+.hader span{
+    color: gold;
+}
