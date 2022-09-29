@@ -2,6 +2,7 @@ import './Body.css'
 import React, { useEffect, useState } from 'react';
 import Cart from '../Cart/Cart';
 import Addcart from '../Addcart/Addcart';
+import Qussen from '../Qussen/Qussen';
 
 const Body = () => {
     const [carts,setCarts]=useState([])
@@ -22,6 +23,9 @@ const Body = () => {
             </div>
             <div className='addCart-container'>
                 <Addcart Time={newtime}></Addcart>
+            </div>
+            <div>
+                <Qussen></Qussen>
             </div>
         </div>
     );
