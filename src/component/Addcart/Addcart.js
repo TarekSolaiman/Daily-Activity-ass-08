@@ -1,6 +1,6 @@
 import './Addcart.css'
 
-import React from 'react';
+import React, { useState } from 'react';
 
 const Addcart = (props) => {
     const {Time}=props
@@ -39,19 +39,30 @@ const NameDL=()=>{
 
 const BrackTime=(props)=>{
     const {workTime}=props
+
+    const [brakeTime,setBraketime]=useState(0)
+    // const storedTime=localStorage.getItem('Braek-Time')
+    //     if(storedTime){
+    //         setBraketime(storedTime)
+    //     }
+    const addBrake=(time)=>{
+        
+        setBraketime(time)
+        localStorage.setItem('Braek-Time',JSON.stringify(time))
+    }
     
     return(
         <div>
             <div className='barak-btn-cont'>
-                <button><p>20 s</p></button>
-                <button><p>30 s</p></button>
-                <button><p>40 s</p></button>
-                <button><p>50 s</p></button>
+                <button onClick={()=>addBrake(20)}><p>20 s</p></button>
+                <button onClick={()=>addBrake(30)}><p>30 s</p></button>
+                <button onClick={()=>addBrake(40)}><p>40 s</p></button>
+                <button onClick={()=>addBrake(50)}><p>50 s</p></button>
             </div>
             <div>
                 <h2>Active Details</h2>
                 <p>Work time : {workTime}</p>
-                <p>brake time : {}</p>
+                <p>brake time : {brakeTime}</p>
             </div>
         </div>
     )
