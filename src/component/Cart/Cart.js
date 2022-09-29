@@ -1,19 +1,18 @@
 import './Cart.css'
 
-const Cart = ({carts}) => {
-    console.log(carts);
+const Cart = ({carts,addWorkTime}) => {
     return (
         <div className='cart-container'>
             {
-                carts.map(cart=><MakeCart cart={cart} key={cart.id}></MakeCart>)
+                carts.map(cart=><MakeCart cart={cart} key={cart.id} addWorkTime={addWorkTime}></MakeCart>)
             }
         </div>
     );
 };
 
 const MakeCart=(props)=>{
-    const {name,img,schedule,time,activitys}=props.cart
-    console.log(img);
+    const {cart,addWorkTime}=props
+    const {name,img,schedule,time,activitys}=cart
     return(
         <div className='cart'>
             <img src={img} alt="ok" />
@@ -21,7 +20,7 @@ const MakeCart=(props)=>{
             <p>{activitys}</p>
             <p>Which time : {schedule}</p>
             <p>Time : {time}</p>
-            <button>Add Now</button>
+            <button onClick={()=>addWorkTime(time)}>Add Now</button>
         </div>
     )
 }

@@ -5,18 +5,23 @@ import Addcart from '../Addcart/Addcart';
 
 const Body = () => {
     const [carts,setCarts]=useState([])
+    const [newtime,setNewtime]=useState(0);
     useEffect(()=>{
         fetch('activitys.json')
         .then(res=>res.json())
         .then(data=>setCarts(data))
     },[])
+    const addWorkTime=(time)=>{
+        let addtime=newtime+time;
+        setNewtime(addtime);    
+    }
     return (
         <div className='main-body'>
             <div>
-                <Cart carts={carts}></Cart>
+                <Cart carts={carts} addWorkTime={addWorkTime}></Cart>
             </div>
             <div className='addCart-container'>
-                <Addcart></Addcart>
+                <Addcart Time={newtime}></Addcart>
             </div>
         </div>
     );
