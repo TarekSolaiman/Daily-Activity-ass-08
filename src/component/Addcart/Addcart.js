@@ -71,7 +71,7 @@ const BrackTime=(props)=>{
 }
 
 const tostAlart=()=>{
-    alert('Activity completed now ready new activity')
+    alert('Activity completed now ready new to a new work')
 }
 
 
