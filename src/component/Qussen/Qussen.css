@@ -1,0 +1,15 @@
+.qussen div{
+ background-color: rgba(43, 253, 148, 0.877);
+ margin: 50px;
+ padding: 20px;
+ border-radius: 10px;
+ text-align: justify;
+ color: gray;
+}
+.qussen p{
+    font-size: 17px;
+}
+.qussen h3{
+    font-size: 20px;
+    color: rgb(73, 73, 73);
+}

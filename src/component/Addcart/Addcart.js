@@ -18,7 +18,7 @@ const NameDL=()=>{
         <div className='personel-cont'>
             <img className='my-img' src="https://dailytimes.com.pk/assets/uploads/2020/09/a7dd69ef575cddc4928d8ce28089d11c-1280x720.jpg" alt="" />
             <h2>MD. Faysal Bin Nasir</h2>
-            <p>Kashmir , Indea</p>
+            <p>Kashmir , India</p>
         <div className='personel-dls'>
             <div className='dls-item'>
                 <p>80<span>kg</span></p>
@@ -58,6 +58,7 @@ const BrackTime=(props)=>{
                 <button onClick={()=>addBrake(30)}><p>30 s</p></button>
                 <button onClick={()=>addBrake(40)}><p>40 s</p></button>
                 <button onClick={()=>addBrake(50)}><p>50 s</p></button>
+                <button onClick={()=>addBrake(60)}><p>60 s</p></button>
             </div>
             <div>
                 <h2>Active Details</h2>
