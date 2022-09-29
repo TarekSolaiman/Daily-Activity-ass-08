@@ -20,7 +20,7 @@ const MakeCart=(props)=>{
             <p>{activitys}</p>
             <p>Which time : {schedule}</p>
             <p>Time : {time}</p>
-            <button onClick={()=>addWorkTime(time)}>Add Now</button>
+            <button className='cart-btn' onClick={()=>addWorkTime(time)}><p>Add Now</p></button>
         </div>
     )
 }
