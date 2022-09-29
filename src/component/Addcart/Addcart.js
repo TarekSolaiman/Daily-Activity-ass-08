@@ -39,17 +39,13 @@ const NameDL=()=>{
 
 const BrackTime=(props)=>{
     const {workTime}=props
-
     const [brakeTime,setBraketime]=useState(0)
-    // const storedTime=localStorage.getItem('Braek-Time')
-    //     if(storedTime){
-    //         setBraketime(storedTime)
-    //     }
+
     const addBrake=(time)=>{
-        
         setBraketime(time)
         localStorage.setItem('Braek-Time',JSON.stringify(time))
     }
+    
     
     return(
         <div>
@@ -64,8 +60,13 @@ const BrackTime=(props)=>{
                 <p>Work time : {workTime}</p>
                 <p>brake time : {brakeTime}</p>
             </div>
+            <button onClick={tostAlart} className='completed-btn'><p>Activity Completed</p></button>
         </div>
     )
+}
+
+const tostAlart=()=>{
+    alert('Activity completed now ready new activity')
 }
 
 

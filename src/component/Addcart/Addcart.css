@@ -49,3 +49,9 @@
     font-weight: 700;
 }
 
+.completed-btn{
+    background-color: rgb(250, 253, 71);
+    width: 250px;
+    border: none;
+    border-radius: 8px;
+}
